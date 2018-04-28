@@ -1,0 +1,28 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "Rest api backend for COSC 331",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwilson780/rest331.git"
+  },
+  "author": "Jake Wilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwilson780/rest331/issues"
+  },
+  "homepage": "https://github.com/jwilson780/rest331#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16",
+    "nodemon": "^1.17.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
