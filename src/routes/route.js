@@ -1,20 +1,15 @@
-import { addNewContact } from "../controllers/controller";
+import { addNewContact, getContacts } from "../controllers/controller";
 
 const routes = app => {
   //Contact Route
   app
     .route("/contact")
-    .get(
-      (req, res, next) => {
-        //middleware
-        console.log(`Request from:${req.originalUrl}`);
-        console.log(`Request from:${req.method}`);
-        next(); //allows the next function to happen
-      },
-      (req, res, next) => {
-        res.send("GET Request sucessfull");
-      }
-    )
+    .get((req, res, next) => {
+      //middleware
+      console.log(`Request from:${req.originalUrl}`);
+      console.log(`Request from:${req.method}`);
+      next(); //allows the next function to happen
+    }, getContacts)
     .post(addNewContact);
 
   //Contact ID routes
