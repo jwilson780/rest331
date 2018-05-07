@@ -9,7 +9,7 @@ const PORT = 3000;
 //mongoose connection
 mongoose.connect("mongodb://localhost/project2"); //database connect
 
-//bodyparser
+// bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
