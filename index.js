@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
+import bodyParser from "body-parser";
 import routes from "./src/routes/route";
+
 const app = express();
 const PORT = 3000;
 
@@ -8,8 +10,8 @@ const PORT = 3000;
 mongoose.connect("mongodb://localhost/project2"); //database connect
 
 //bodyparser
-express.urlencoded({ extended: true }); //parses incoming requests with urlencoded payloads
-express.json(); //parses incoming requests with JSON payloads
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 routes(app); //allows for use of routes created earlier
 

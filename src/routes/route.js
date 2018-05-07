@@ -15,6 +15,7 @@ const routes = app => {
         res.send("GET Request sucessfull");
       }
     )
+    //post endpoint
     .post(addNewContact);
 
   //Contact ID routes
