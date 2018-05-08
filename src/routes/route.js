@@ -1,19 +1,16 @@
 import {
   addNewContact,
   getContacts,
-  getSpecificContact
+  getSpecificContact,
+  updateContact,
+  deleteContact
 } from "../controllers/controller";
 
 const routes = app => {
   //Contact Route
   app
     .route("/contact")
-    .get((req, res, next) => {
-      //middleware
-      console.log(`Request from:${req.originalUrl}`);
-      console.log(`Request from:${req.method}`);
-      next(); //allows the next function to happen
-    }, getContacts)
+    .get(getContacts)
     .post(addNewContact);
 
   //Contact ID routes
@@ -21,8 +18,8 @@ const routes = app => {
   app
     .route("/contact/:contactId")
     .get(getSpecificContact)
-    .put((req, res) => res.send("PUT request successfull"))
-    .delete((req, res) => res.send("DELETE request sucessfull"));
+    .put(updateContact)
+    .delete(deleteContact);
 };
 
 export default routes;
