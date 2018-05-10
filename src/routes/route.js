@@ -1,4 +1,8 @@
-import { addNewContact, getContacts } from "../controllers/controller";
+import {
+  addNewContact,
+  getContacts,
+  getContactWithId
+} from "../controllers/controller";
 
 const routes = app => {
   //Contact Route
@@ -16,6 +20,7 @@ const routes = app => {
 
   app
     .route("/contact/:contactId")
+    .get(getContactWithId)
     .put((req, res) => res.send("PUT request successfull"))
     .delete((req, res) => res.send("DELETE request sucessfull"));
 };
