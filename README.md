@@ -6,7 +6,9 @@ Basic Restful API for a contact application. Built with my class during COSC 331
 
 Clone repo into folder.  
 Run the following:
-npm i
+
+npm i 
+
 npm start
 
 ### Prerequisites
